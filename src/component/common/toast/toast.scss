@@ -1,0 +1,20 @@
+@import "../../../../src/style/extend.scss";
+@import "../../../../src/style/animate.scss";
+
+.toast {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 14px;
+	transform: translate(-50%, -50%);
+	// TODO 修改动画的引入方式
+	animation: fadeIn 0.2s;
+	z-index: 999;
+
+	span {
+		color: #fff;
+		background-color: rgba($color: #000000, $alpha: 0.5);
+		padding: 6px;
+		border-radius: 14px;
+	}
+}

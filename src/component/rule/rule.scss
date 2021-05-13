@@ -1,0 +1,95 @@
+@import "../../../src/style/extend.scss";
+@import "../../../src/style/animate.scss";
+
+.rule {
+	@extend .absolute-full-page;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	z-index: 2;
+
+	.rule-wrap {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		animation: bounceInUp 0.8s;
+	}
+
+	.rule-banner {
+		@include bg-reset(contain);
+		background-image: url("~@img/rule/复活节彩蛋@2x.png");
+		width: 4.06rem;
+		height: 2.08rem;
+	}
+
+	.rule-container {
+		@include bg-reset(contain);
+		background-image: url("~@img/rule/bg@2x.png");
+		background-position: top;
+		width: 100%;
+		height: 8rem;
+	}
+
+	.rule-tail {
+		@include bg-reset(contain);
+		background-image: url("~@img/rule/bg@2x的副本.png");
+		background-repeat: repeat-y;
+		width: 100%;
+		height: 4rem;
+		position: absolute;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.rule-top {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 0.27rem;
+		margin-bottom: 0.4rem;
+	}
+
+	.rule-back,
+	.rule-close {
+		width: 0.78rem;
+		height: 0.78rem;
+		@include bg-reset(contain);
+	}
+
+	.rule-back {
+		background-image: url("~@img/rule/叉@2x(1).png");
+	}
+
+	.rule-close {
+		background-image: url("~@img/rule/叉@2x.png");
+	}
+
+	.rule-title {
+		height: 0.37rem;
+		font-weight: 600;
+		color: #4d3113;
+		font-size: 24px;
+	}
+
+	.rule-scroll {
+		overflow-y: auto;
+		height: 6rem;
+	}
+
+	.rule-content {
+		font-size: 14px;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: #125433;
+
+		width: 80%;
+		margin: 0 auto;
+		z-index: 1;
+		position: relative;
+	}
+
+	p {
+		margin: 0;
+	}
+}

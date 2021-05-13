@@ -1,0 +1,25 @@
+@import "../../style/extend.scss";
+
+.home {
+	@extend .full-page;
+	@include bg-reset(cover);
+	background-image: url("~@img/bg@2x.png");
+	position: relative;
+	overflow: hidden;
+}
+
+.content {
+	// padding: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 50 * 15px;
+}
+
+.cube {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	// 解决边框重叠问题，但可能会影响布局
+	margin: 0px -1px -1px 0px;
+}
